@@ -1,0 +1,376 @@
+/* 초기화 */
+body,p,h1,h2,h3,h4,h5,h6,ul,li,dl,dt,dd { margin:0; padding:0; }
+h1,h2,h3,h4 { font-size:12px; }
+ul { list-style:none; } 
+img { border:0; vertical-align:top; } 
+* { margin: 0; padding: 0; }
+a { text-decoration:none; color:white; }
+
+/* 폰트 불러오기 */
+@font-face { 
+    font-family:'bodoni'; 
+	src: url('../font/font/bodoni.woff') format('woff');
+}
+
+/* 베이스 */
+body { font-size: 13px; background-color: black; font-family: "Roboto", "Noto Sans KR"; position: relative;  }
+
+/* 레이아웃 */
+#header { position: absolute; left: 0px; top: 0px; width: 100%; z-index: 1000; }
+#header .inner { position: relative; top: 63px; left: 0; margin: 0 auto; width: 1680px; height: 52px; /*border: 2px solid white;*/ }
+
+#visual {  }
+#visual .inner { position: relative; top: 115px; left: 0px; width: 1680px; height: 850px; margin: 0 auto; /*border: 2px solid #0cc;*/ }
+
+#contents {  }
+#contents .inner { position: relative; top: 115px; left: 0px; width: 1680px; height: 2750px; margin: 0 auto; /*border: 2px solid #ccc;*/ }
+
+#about { height: 900px; /*border: 2px dashed red;*/ position: relative; padding-bottom: 20px; margin-top: 50px; }
+
+#works { height: 1500px; /*border: 2px dashed yellow;*/ position: relative; }
+
+#contact { height: 400px; /*border: 2px dashed green;*/ position: relative; }
+	
+#footer {  }
+#footer .inner { position: relative; top: 115px; left: 0px; width: 1680px; height: 200px; margin: 0 auto; /*border: 2px solid blue;*/ }
+
+#start { position: relative; top: 0px; left: 0px; /*border: 1px solid red;*/ width: 100%; }
+#start .inner { position: absolute; top: 0px; left: 0px; width: 1680px; height: 953px; margin-left: 119.5px; /*border: 2px solid #0cc;*/ }
+
+	
+/* stre */
+.p1 { font-size: 130px; color: white; text-align: center; }
+.p2 { font-size: 55px; color: white; text-align: center;  }
+.p3 { font-size: 55px; color: white; text-align: center;  }
+.p4 { font-size: 130px; color: white; text-align: center;  }
+
+.yesblur { 
+	animation: Yblur 1s both;
+	padding-top: 135px;
+}
+@keyframes Yblur{
+	0% { filter: blur(0px); }
+	100% { filter: blur(9px); }
+}
+
+.star_left { 
+	overflow: hidden;
+	transition:0.5s;
+	width: 290px; height: 290px; 
+	border-radius: 100%; border: 25px solid white; 
+	position: absolute; 
+	top: 155px; left: 451px; 
+}
+.star_left div {
+	transition:0.5s;
+	position:absolute; 
+	left:-187px; top: -45px;
+	width:1100px;	
+	background: black;
+	
+}
+
+.p2 span { padding-left:333px; }
+
+.star_right {
+	overflow: hidden;
+	transition:0.5s;
+	width: 290px; height: 290px; 
+	border-radius: 100%; border: 25px solid white;
+	position: absolute; 
+	
+	top: 155px; left: 916px; 
+}
+
+.star_right div { 
+	transition:0.5s;
+	position:absolute; 
+	left:-601px; top: -45px;
+	width:1000px;
+	background: black;
+}
+
+.Nblur1 svg { position: absolute; top: 136px; left: 703px; /*opacity: 0;*/ }
+
+.animation_pop { animation: visual_movement_pop 7s backwards; }
+
+.animation_pop > div { animation: visual_movement_in_pop 7s backwards; }
+
+@keyframes visual_movement_pop { 
+	0% { transform: translateY(-600px); }
+	100% { transform: translateY(0); }
+}
+
+@keyframes visual_movement_in_pop { 
+	0% { transform: translateY(600px); }
+	100% { transform: translateY(0); }
+}
+
+.start { border: 1px solid white; position: absolute; width: 400px; height: 200px; text-align: center; justify-content: center; display: flex; align-items: center; animation: start_buttom 3s 7s backwards; bottom: 100px; left: 650px; border-radius: 80px; cursor: pointer; }
+
+.start p { font-size: 100px; font-family: "bodoni"; color: white; position: absolute;  }
+
+@keyframes start_buttom {
+	0% { opacity: 0; }
+	100% { opacity: 1; }
+}
+
+.poop { 
+	
+	position:fixed; 
+	left:0px; top:0px;
+	width:100%; height:100%; 
+	background:rgba(0,0,0,0.7); 
+	z-index:1000;
+	overflow:auto; /* 팝업안의 내용물이 많을 경우 팝업 자체에 스크롤 생김 */
+}
+
+/* header */
+#header .inner .logo { font-family: 'bodoni'; font-size: 30px; color: white; margin-top: 4px; }
+.gnb { position: absolute; top: 13px; right: 0px; display: flex; width: 418px; /*border: 2px solid red;*/ justify-content: space-between; font-size: 15px; }
+
+/* visual */
+.visual_p { 
+color: white; text-align: center; font-size: 20px; margin-top: 100px;
+font-size: 30px; font-family: 'bodoni'; animation: visual_transparency 3s 4s backwards;
+}
+
+@keyframes visual_transparency {
+	0% { opacity: 0; }
+	100% { opacity: 1; }
+}
+
+.p1 { font-size: 130px; color: white; text-align: center; }
+.p2 { font-size: 55px; color: white; text-align: center;  }
+.p3 { font-size: 55px; color: white; text-align: center;  }
+.p4 { font-size: 130px; color: white; text-align: center;  }
+
+.Yblur { 
+	filter: blur(9px);
+	padding-top: 80px;
+}
+
+.left { 
+	overflow: hidden;
+	transition:0.5s;
+	width: 290px; height: 290px; 
+	border-radius: 100%; border: 25px solid white; 
+	position: absolute; 
+	top: 100px; left: 451px; 
+}
+.left div {
+	transition:0.5s;
+	position:absolute; 
+	left:-187px; top: -45px;
+	width:1100px;
+	background: black;
+}
+
+.p2 span { padding-left:333px; }
+
+.right {
+	overflow: hidden;
+	transition:0.5s;
+	width: 290px; height: 290px; 
+	border-radius: 100%; border: 25px solid white;
+	position: absolute; 
+	top: 100px; left: 916px; 
+}
+
+.right div { 
+	transition:0.5s;
+	position:absolute; 
+	left:-601px; top: -45px;
+	width:1000px;	
+	background: black;
+}
+
+
+.Nblur svg { position: absolute; top: 81px; left: 703px; }
+
+.animation { animation: visual_movement 5s backwards; }
+
+.animation > div { animation: visual_movement_in 5s backwards; }
+
+@keyframes visual_movement { 
+	0% { transform: translateY(-600px); }
+	100% { transform: translateY(0); }
+}
+
+@keyframes visual_movement_in { 
+
+	0% { transform: translateY(600px); }
+	100% { transform: translateY(0); }
+
+}
+
+/* contents */
+#contents { color: white; }
+
+/* about */
+#aboutH2 { font-size: 70px; }
+#about .etc { font-size: 18px; font-family: "Noto Sans KR"; }
+
+/* who am i */
+.whoami { position: absolute; top: 150px; left: 300px; display: flex; }
+#aboutH3 { position: absolute; top: 200px; left: 300px; font-size: 30px; }
+.whoami p:nth-child(1) { font-size: 18px; margin-top: 150px; font-family: "Noto Sans KR"; }
+.whoami p:nth-child(2) { font-size: 18px; margin-top: 150px; margin-left: 100px; font-family: "Noto Sans KR"; }
+
+/* skill */
+.skill { position: absolute; top: 115px; left: 0px; }
+#skillH3 { position: absolute; top: 200px; left: 1018px; font-size: 30px; }
+.skill p { font-size: 18px; margin-top: 180px; margin-left: 1018px; line-height: 25px; }
+.skill div:nth-of-type(1) { width: 233px; height: 21px; background-color: white; position: absolute; top: 184px; left: 1200px; }
+.skill div:nth-of-type(2) { width: 140px; height: 21px; background-color: white; position: absolute; top: 233px; left: 1200px; }
+.skill div:nth-of-type(3) { width: 260px; height: 21px; background-color: white; position: absolute; top: 280px; left: 1200px; }
+.skill div:nth-of-type(4) { width: 167px; height: 21px; background-color: white; position: absolute; top: 329px; left: 1200px; }
+.skill div:nth-of-type(5) { width: 140px; height: 21px; background-color: white; position: absolute; top: 380px; left: 1200px; }
+
+@keyframes motion1{
+	0% { width: 0px; opacity: 0; }
+	100% { width: 233px; opacity: 1; }
+}
+
+@keyframes motion2{
+	0% { width: 0px; opacity: 0; }
+	100% { width: 140px; opacity: 1; }
+}
+
+@keyframes motion3{
+	0% { width: 0px; opacity: 0; }
+	100% { width: 260px; opacity: 1; }
+}
+
+@keyframes motion4{
+	0% { width: 0px; opacity: 0; }
+	100% { width: 167px; opacity: 1; }
+}
+
+@keyframes motion5{
+	0% { width: 0px; opacity: 0; }
+	100% { width: 140px; opacity: 1; }
+}
+
+/* works */
+#worksH2 { font-size: 70px; }
+#works .etc { font-size: 18px; font-family: "Noto Sans KR"; }
+
+/* web publishing */
+.webPublishing { position: relative; top: 50px; }
+.webPublishing p { font-size: 30px; margin-left: 50px; }
+.webPublishing div:nth-of-type(1) { width: 357px; height: 357px; /*background-color:aqua;*/ position: absolute; top: 80px; left: 50px; }
+.webPublishing div:nth-of-type(1) img { width: 100%; }
+
+.webPublishing div:nth-of-type(2) { width: 357px; height: 357px; /*background-color:aqua;*/ position: absolute; top: 80px; left: 459px; }
+.webPublishing div:nth-of-type(2) img { width: 100%; }
+
+.webPublishing div:nth-of-type(3) { width: 357px; height: 357px; /*background-color:aqua;*/ position: absolute; top: 80px; left: 866px; }
+.webPublishing div:nth-of-type(3) img { width: 100%; }
+
+.webPublishing div:nth-of-type(4) { width: 357px; height: 357px; /*background-color:aqua;*/ position: absolute; top: 80px; left: 1273px; }
+.webPublishing div:nth-of-type(4) img { width: 100%; }
+
+.display_none { display: none; }
+
+.miseenscene_a { opacity: 0; transition: 0.5s; color: white; font-size: 25px; position: absolute; top: 133px; left: 85px }
+.miseenscene:hover .miseenscene_a { opacity: 1; color: white; }
+.miseenscene:hover img { opacity: 0.3; }
+
+.bmw_a { opacity: 0; transition: 0.5s; color: white; font-size: 25px; position: absolute; top: 133px; left: 85px }
+.bmw:hover .bmw_a { opacity: 1; color: white; }
+.bmw:hover img { opacity: 0.3; }
+
+.hylee_a { opacity: 0; transition: 0.5s; color: white; font-size: 25px; position: absolute; top: 133px; left: 85px }
+.hylee:hover .hylee_a { opacity: 1; color: white; }
+.hylee:hover img { opacity: 0.3; }
+
+.avante_a { opacity: 0; transition: 0.5s; color: white; font-size: 25px; position: absolute; top: 133px; left: 85px }
+.avante:hover .avante_a { opacity: 1; color: white; }
+.avante:hover img { opacity: 0.3; }
+
+/* design */
+
+.design { position: relative; top: 500px; left: 0px; display: flex; }
+.design p { font-size: 30px; margin-left: 50px; }
+.design .design_logo { width: 493px; height: 317px; /*background-color:aqua;*/ position: absolute; top: 100px; left: 50px; }
+.design .design_logo img { width: 100%; height: 100%; }
+
+.design .line { width: 493px; height: 317px; /*background-color:aqua;*/ position: absolute; top: 100px; left: 594px; }
+.design .line img { width: 100%; height: 100%; }
+
+.design .genesis { width: 493px; height: 317px; /*background-color:aqua;*/ position: absolute; top: 100px; left: 1137px; }
+.design .genesis img { width: 100%; height: 100%; }
+
+.pop .c1 { margin:0 auto; width:1500px; color:#767676; background:white; }
+.pop .c2 { margin:0 auto; width:1500px; color:#767676; background:white; }
+.pop .c3 { margin:0 auto; width:1500px; color:#767676; background:white; }
+
+
+.pop .c1 img { width: 100%; margin-top: 40px; border-top: 1px solid black; }
+.pop .c1 p { font-size: 15px; margin-left: 50px; }
+.pop .c1 p:nth-of-type(1) { font-size: 70px; margin-left: 50px; padding-top: 50px; text-align: center; color: black; font-family: "bodoni"}
+.pop .c1 p:nth-of-type(2) { font-size: 20px; margin-left: 50px; padding-top: 50px; text-align: center; }
+.pop .c1 .etc { font-size: 20px; margin-left: 50px; height: 100px; display: flex; position: relative; }
+.pop .c1 .etc .color { position: absolute; bottom: 35px; left: 100px; color: black; }
+.pop .c1 .etc .program { position: absolute; bottom: 35px; left: 600px; color: black; }
+.pop .c1 .etc .font { position: absolute; bottom: 35px; left: 1100px; color: black; }
+
+.pop .c2 img { width: 100%; margin-top: 40px; border-top: 1px solid black; }
+.pop .c2 p { font-size: 15px; margin-left: 50px; }
+.pop .c2 p:nth-of-type(1) { font-size: 70px; margin-left: 50px; padding-top: 50px; text-align: center; color: black; font-family: "bodoni"}
+.pop .c2 p:nth-of-type(2) { font-size: 20px; margin-left: 50px; padding-top: 50px; text-align: center; }
+.pop .c2 .etc { font-size: 20px; margin-left: 50px; height: 100px; display: flex; position: relative; }
+.pop .c2 .etc .color { position: absolute; bottom: 35px; left: 100px; color: black; }
+.pop .c2 .etc .program { position: absolute; bottom: 35px; left: 600px; color: black; }
+.pop .c2 .etc .font { position: absolute; bottom: 35px; left: 1100px; color: black; }
+
+.pop .c3 img { width: 100%; margin-top: 40px; border-top: 1px solid black; }
+.pop .c3 p { font-size: 15px; margin-left: 50px; }
+.pop .c3 p:nth-of-type(1) { font-size: 70px; margin-left: 50px; padding-top: 50px; text-align: center; color: black; font-family: "bodoni"}
+.pop .c3 p:nth-of-type(2) { font-size: 20px; margin-left: 50px; padding-top: 50px; text-align: center; }
+.pop .c3 .etc { font-size: 20px; margin-left: 50px; height: 100px; display: flex; position: relative; }
+.pop .c3 .etc .color { position: absolute; bottom: 35px; left: 100px; color: black; }
+.pop .c3 .etc .program { position: absolute; bottom: 35px; left: 600px; color: black; }
+.pop .c3 .etc .font { position: absolute; bottom: 35px; left: 1100px; color: black; }
+
+.white { width: 12px; height: 12px; border-radius: 100%; display: inline-block; background-color: #fff; }
+.black { width: 12px; height: 12px; border-radius: 100%; display: inline-block; background-color: #111; }
+
+.menu img { width: 100%; }
+
+.design_logo .logo_a { opacity: 0; transition: 0.5s; color: white; font-size: 25px; position: absolute; top: 135px; left: 180px; }
+.design_logo:hover .logo_a { opacity: 1; color: white; }
+.design_logo:hover .menu img { opacity: 0.3; }
+
+.line .line_a { opacity: 0; transition: 0.5s; color: white; font-size: 25px; position: absolute; top: 135px; left: 180px; }
+.line:hover .line_a { opacity: 1; color: white; }
+.line:hover .menu img { opacity: 0.3; }
+
+.genesis .genesis_a { opacity: 0; transition: 0.5s; color: white; font-size: 25px; position: absolute; top: 135px; left: 180px; }
+.genesis:hover .genesis_a { opacity: 1; color: white; }
+.genesis:hover .menu img { opacity: 0.3; }
+
+.close { position:fixed; right:30px; top:30px; color:#fff; font-family: "Noto Sans KR"; font-size: 30px; }
+
+.pop { 
+	display:none; 
+	position:fixed; 
+	left:0px; top:0px;
+	width:100%; height:100%; 
+	background:rgba(0,0,0,0.7); 
+	z-index:1000;
+	overflow:auto; /* 팝업안의 내용물이 많을 경우 팝업 자체에 스크롤 생김 */
+}
+
+#con { margin:0 auto; width:1200px; height:2000px; border:2px dashed #ccc; }
+
+#con li {float:left; width:200px; height:200px; margin-left:20px; background:#F96; position: relative; }
+
+/* contact */
+#contactH2 { font-size: 70px; }
+.phone { font-size: 30px; display: flex; position: absolute; top: 200px; left: 50px; }
+.email { font-size: 30px; display: flex; position: absolute; top: 200px; left: 900px; }
+
+/* footer */
+#footer .inner p { color: white; text-align: center; margin-top: 100px; }
